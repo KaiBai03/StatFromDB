@@ -1,0 +1,7 @@
+<RCC>
+    <qresource prefix="/StatFromDB">
+        <file>detailsTables.sql</file>
+        <file>summaryTables.sql</file>
+        <file>waveInfoTables.sql</file>
+    </qresource>
+</RCC>
