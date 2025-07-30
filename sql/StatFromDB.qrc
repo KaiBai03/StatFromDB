@@ -1,0 +1,10 @@
+<RCC>
+    <qresource prefix="/StatFromDB/sql">
+        <file>detailsTables.sql</file>
+        <file>idMatchedTables.sql</file>
+        <file>summaryTables.sql</file>
+        <file>timeFilteredResult.sql</file>
+        <file>waveInfoByTime.sql</file>
+        <file>waveInfoTables.sql</file>
+    </qresource>
+</RCC>

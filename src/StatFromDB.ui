@@ -1,0 +1,2758 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>StatFromDBClass</class>
+ <widget class="QMainWindow" name="StatFromDBClass">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1244</width>
+    <height>642</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>StatFromDB</string>
+  </property>
+  <property name="autoFillBackground">
+   <bool>false</bool>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <widget class="QGroupBox" name="groupBox">
+    <property name="geometry">
+     <rect>
+      <x>330</x>
+      <y>20</y>
+      <width>210</width>
+      <height>201</height>
+     </rect>
+    </property>
+    <property name="autoFillBackground">
+     <bool>true</bool>
+    </property>
+    <property name="title">
+     <string>P波预警传输时延</string>
+    </property>
+    <widget class="QLabel" name="label">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>25</y>
+       <width>48</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>统计组数</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="P_send_sum">
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
+     <property name="geometry">
+      <rect>
+       <x>138</x>
+       <y>25</y>
+       <width>62</width>
+       <height>19</height>
+      </rect>
+     </property>
+     <property name="mouseTracking">
+      <bool>false</bool>
+     </property>
+     <property name="readOnly">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_2">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>50</y>
+       <width>83</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>≤100ms数据数</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="P_send_le_100">
+     <property name="geometry">
+      <rect>
+       <x>138</x>
+       <y>50</y>
+       <width>62</width>
+       <height>18</height>
+      </rect>
+     </property>
+     <property name="autoFillBackground">
+      <bool>true</bool>
+     </property>
+     <property name="readOnly">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_3">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>74</y>
+       <width>24</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>占比</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="P_send_le_rate">
+     <property name="geometry">
+      <rect>
+       <x>138</x>
+       <y>74</y>
+       <width>62</width>
+       <height>19</height>
+      </rect>
+     </property>
+     <property name="readOnly">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_6">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>123</y>
+       <width>36</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>平均值</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="P_send_avg_t">
+     <property name="geometry">
+      <rect>
+       <x>138</x>
+       <y>123</y>
+       <width>62</width>
+       <height>19</height>
+      </rect>
+     </property>
+     <property name="readOnly">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_7">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>148</y>
+       <width>36</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>最大值</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="P_send_max_t">
+     <property name="geometry">
+      <rect>
+       <x>138</x>
+       <y>148</y>
+       <width>62</width>
+       <height>18</height>
+      </rect>
+     </property>
+     <property name="readOnly">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_8">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>172</y>
+       <width>36</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>最小值</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="P_send_min_t">
+     <property name="geometry">
+      <rect>
+       <x>138</x>
+       <y>172</y>
+       <width>62</width>
+       <height>19</height>
+      </rect>
+     </property>
+     <property name="readOnly">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="P_send_pass">
+     <property name="geometry">
+      <rect>
+       <x>138</x>
+       <y>99</y>
+       <width>62</width>
+       <height>18</height>
+      </rect>
+     </property>
+     <property name="readOnly">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_63">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>99</y>
+       <width>70</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>达标率≥95%</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QGroupBox" name="groupBox_2">
+    <property name="geometry">
+     <rect>
+      <x>330</x>
+      <y>230</y>
+      <width>210</width>
+      <height>260</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>P波预警首报震中位置偏差</string>
+    </property>
+    <widget class="QLabel" name="label_9">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>25</y>
+       <width>60</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>统计组数：</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="single_p_dis_diff_sum">
+     <property name="geometry">
+      <rect>
+       <x>138</x>
+       <y>25</y>
+       <width>62</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="readOnly">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_10">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>51</y>
+       <width>89</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>≤60km组数</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="diff_le_60km_cnt">
+     <property name="geometry">
+      <rect>
+       <x>138</x>
+       <y>51</y>
+       <width>62</width>
+       <height>19</height>
+      </rect>
+     </property>
+     <property name="readOnly">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_11">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>76</y>
+       <width>89</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>≤60km占比</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="diff_le_60km_rate">
+     <property name="geometry">
+      <rect>
+       <x>138</x>
+       <y>76</y>
+       <width>62</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="readOnly">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_12">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>102</y>
+       <width>108</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>8</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>≤60km占比≥60%</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="diff_le_60km_pass">
+     <property name="geometry">
+      <rect>
+       <x>138</x>
+       <y>102</y>
+       <width>62</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="readOnly">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_13">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>128</y>
+       <width>96</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>≤100km组数</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="diff_le_100km_cnt">
+     <property name="geometry">
+      <rect>
+       <x>138</x>
+       <y>128</y>
+       <width>62</width>
+       <height>19</height>
+      </rect>
+     </property>
+     <property name="readOnly">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_14">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>153</y>
+       <width>96</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>≤100km占比</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="diff_le_100km_rate">
+     <property name="geometry">
+      <rect>
+       <x>138</x>
+       <y>153</y>
+       <width>62</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="readOnly">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_15">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>179</y>
+       <width>108</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>8</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>≤100km占比≥80%</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="diff_le_100km_pass">
+     <property name="geometry">
+      <rect>
+       <x>138</x>
+       <y>179</y>
+       <width>62</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="readOnly">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_16">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>205</y>
+       <width>86</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>偏差最大值(km)</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="single_p_dis_diff_max">
+     <property name="geometry">
+      <rect>
+       <x>138</x>
+       <y>205</y>
+       <width>62</width>
+       <height>19</height>
+      </rect>
+     </property>
+     <property name="readOnly">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_17">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>230</y>
+       <width>108</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>最大值≤300km</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="dis_diff_max_le_300km_pass">
+     <property name="geometry">
+      <rect>
+       <x>138</x>
+       <y>230</y>
+       <width>62</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="readOnly">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QGroupBox" name="groupBox_3">
+    <property name="geometry">
+     <rect>
+      <x>560</x>
+      <y>190</y>
+      <width>211</width>
+      <height>159</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>单台P波预警首报震级偏差</string>
+    </property>
+    <widget class="QLabel" name="label_19">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>25</y>
+       <width>48</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>统计组数</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_21">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>51</y>
+       <width>64</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>≤1达标组数</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_22">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>77</y>
+       <width>52</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>≤1达标率</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_23">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>103</y>
+       <width>70</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>达标率≥50%</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="single_p_mag_diff_sum">
+     <property name="geometry">
+      <rect>
+       <x>141</x>
+       <y>25</y>
+       <width>60</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="readOnly">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="single_p_mag_diff_le_1">
+     <property name="geometry">
+      <rect>
+       <x>141</x>
+       <y>51</y>
+       <width>60</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="readOnly">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="single_p_mag_diff_le_rate">
+     <property name="geometry">
+      <rect>
+       <x>141</x>
+       <y>77</y>
+       <width>60</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="readOnly">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="single_p_mag_diff_pass">
+     <property name="geometry">
+      <rect>
+       <x>141</x>
+       <y>103</y>
+       <width>60</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="readOnly">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_20">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>129</y>
+       <width>36</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>平均值</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="single_p_mag_diff_avg">
+     <property name="geometry">
+      <rect>
+       <x>141</x>
+       <y>129</y>
+       <width>60</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="readOnly">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QGroupBox" name="groupBox_4">
+    <property name="geometry">
+     <rect>
+      <x>560</x>
+      <y>20</y>
+      <width>211</width>
+      <height>159</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>单台P波预警首报判别时间</string>
+    </property>
+    <widget class="QLabel" name="label_24">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>25</y>
+       <width>48</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>统计组数</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="single_p_judgetime_sum">
+     <property name="geometry">
+      <rect>
+       <x>141</x>
+       <y>25</y>
+       <width>60</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="readOnly">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_26">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>51</y>
+       <width>70</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>≤3s达标组数</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="single_p_judgetime_le_3">
+     <property name="geometry">
+      <rect>
+       <x>141</x>
+       <y>51</y>
+       <width>60</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="readOnly">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_27">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>77</y>
+       <width>58</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>≤3s达标率</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="single_p_judgetime_le_3_rate">
+     <property name="geometry">
+      <rect>
+       <x>141</x>
+       <y>77</y>
+       <width>60</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="readOnly">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_28">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>103</y>
+       <width>79</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>达标率≥90%</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="single_p_judgetime_pass">
+     <property name="geometry">
+      <rect>
+       <x>141</x>
+       <y>103</y>
+       <width>60</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="readOnly">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="single_p_judgetime_avg">
+     <property name="geometry">
+      <rect>
+       <x>141</x>
+       <y>129</y>
+       <width>60</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="readOnly">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_25">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>129</y>
+       <width>36</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>平均值</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QGroupBox" name="groupBox_5">
+    <property name="geometry">
+     <rect>
+      <x>330</x>
+      <y>500</y>
+      <width>211</width>
+      <height>120</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>单台P波预警漏报率</string>
+    </property>
+    <widget class="QLabel" name="label_29">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>25</y>
+       <width>128</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>单台P波预警统计组数</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_30">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>48</y>
+       <width>128</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>单台P波预警漏报组数</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_31">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>71</y>
+       <width>116</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>单台P波预警漏报率</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_32">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>93</y>
+       <width>99</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>漏报率≤5%</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="single_p_warning_miss_sum">
+     <property name="geometry">
+      <rect>
+       <x>141</x>
+       <y>25</y>
+       <width>60</width>
+       <height>17</height>
+      </rect>
+     </property>
+     <property name="readOnly">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="single_p_warning_miss_cnt">
+     <property name="geometry">
+      <rect>
+       <x>141</x>
+       <y>48</y>
+       <width>60</width>
+       <height>17</height>
+      </rect>
+     </property>
+     <property name="readOnly">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="single_p_warning_miss_rate">
+     <property name="geometry">
+      <rect>
+       <x>141</x>
+       <y>71</y>
+       <width>60</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="readOnly">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="single_p_warning_miss_pass">
+     <property name="geometry">
+      <rect>
+       <x>141</x>
+       <y>93</y>
+       <width>60</width>
+       <height>17</height>
+      </rect>
+     </property>
+     <property name="readOnly">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QGroupBox" name="groupBox_6">
+    <property name="geometry">
+     <rect>
+      <x>1020</x>
+      <y>30</y>
+      <width>211</width>
+      <height>120</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>阈值报警漏报率</string>
+    </property>
+    <widget class="QLabel" name="label_33">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>25</y>
+       <width>60</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>试验组数</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_34">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>48</y>
+       <width>60</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>漏报组数</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_35">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>71</y>
+       <width>48</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>漏报率</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_36">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>93</y>
+       <width>116</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>漏报率=0.00%</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="s_warning_miss_sum">
+     <property name="geometry">
+      <rect>
+       <x>141</x>
+       <y>25</y>
+       <width>60</width>
+       <height>18</height>
+      </rect>
+     </property>
+     <property name="readOnly">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="s_warning_miss_cnt">
+     <property name="geometry">
+      <rect>
+       <x>141</x>
+       <y>48</y>
+       <width>60</width>
+       <height>18</height>
+      </rect>
+     </property>
+     <property name="readOnly">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="s_warning_miss_rate">
+     <property name="geometry">
+      <rect>
+       <x>141</x>
+       <y>71</y>
+       <width>60</width>
+       <height>18</height>
+      </rect>
+     </property>
+     <property name="readOnly">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="s_warning_miss_pass">
+     <property name="geometry">
+      <rect>
+       <x>141</x>
+       <y>93</y>
+       <width>60</width>
+       <height>18</height>
+      </rect>
+     </property>
+     <property name="readOnly">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QGroupBox" name="groupBox_8">
+    <property name="geometry">
+     <rect>
+      <x>790</x>
+      <y>290</y>
+      <width>211</width>
+      <height>261</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>阈值报警判别时间</string>
+    </property>
+    <widget class="QStackedWidget" name="s_judgetime_stackedWidget">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>60</y>
+       <width>191</width>
+       <height>191</height>
+      </rect>
+     </property>
+     <property name="currentIndex">
+      <number>2</number>
+     </property>
+     <widget class="QWidget" name="page">
+      <widget class="QLabel" name="label_45">
+       <property name="geometry">
+        <rect>
+         <x>9</x>
+         <y>9</y>
+         <width>91</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>40gal统计组数</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="s_40gal_judgetime_sum">
+       <property name="geometry">
+        <rect>
+         <x>130</x>
+         <y>9</y>
+         <width>60</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="readOnly">
+        <bool>true</bool>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_47">
+       <property name="geometry">
+        <rect>
+         <x>9</x>
+         <y>35</y>
+         <width>80</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>≤0.5s达标组数</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="s_40gal_judgetime_le_cnt">
+       <property name="geometry">
+        <rect>
+         <x>130</x>
+         <y>35</y>
+         <width>60</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="readOnly">
+        <bool>true</bool>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_48">
+       <property name="geometry">
+        <rect>
+         <x>9</x>
+         <y>61</y>
+         <width>68</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>≤0.5s达标率</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="s_40gal_judgetime_le_rate">
+       <property name="geometry">
+        <rect>
+         <x>130</x>
+         <y>61</y>
+         <width>60</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="readOnly">
+        <bool>true</bool>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_18">
+       <property name="geometry">
+        <rect>
+         <x>9</x>
+         <y>87</y>
+         <width>70</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>达标率≥70%</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="s_40gal_judgetime_pass">
+       <property name="geometry">
+        <rect>
+         <x>130</x>
+         <y>87</y>
+         <width>60</width>
+         <height>20</height>
+        </rect>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_46">
+       <property name="geometry">
+        <rect>
+         <x>9</x>
+         <y>113</y>
+         <width>36</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>平均值</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="s_40gal_judgetime_avg">
+       <property name="geometry">
+        <rect>
+         <x>130</x>
+         <y>113</y>
+         <width>60</width>
+         <height>20</height>
+        </rect>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_51">
+       <property name="geometry">
+        <rect>
+         <x>9</x>
+         <y>139</y>
+         <width>36</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>最大值</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="s_40gal_judgetime_max">
+       <property name="geometry">
+        <rect>
+         <x>130</x>
+         <y>139</y>
+         <width>60</width>
+         <height>20</height>
+        </rect>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_50">
+       <property name="geometry">
+        <rect>
+         <x>9</x>
+         <y>165</y>
+         <width>36</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>最小值</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="s_40gal_judgetime_min">
+       <property name="geometry">
+        <rect>
+         <x>130</x>
+         <y>165</y>
+         <width>60</width>
+         <height>20</height>
+        </rect>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QWidget" name="page_2">
+      <widget class="QLabel" name="label_72">
+       <property name="geometry">
+        <rect>
+         <x>9</x>
+         <y>9</y>
+         <width>91</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>80gal统计组数</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="s_80gal_judgetime_sum">
+       <property name="geometry">
+        <rect>
+         <x>130</x>
+         <y>9</y>
+         <width>60</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="readOnly">
+        <bool>true</bool>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_68">
+       <property name="geometry">
+        <rect>
+         <x>9</x>
+         <y>35</y>
+         <width>80</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>≤0.5s达标组数</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="s_80gal_judgetime_le_cnt">
+       <property name="geometry">
+        <rect>
+         <x>130</x>
+         <y>35</y>
+         <width>60</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="readOnly">
+        <bool>true</bool>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_52">
+       <property name="geometry">
+        <rect>
+         <x>9</x>
+         <y>61</y>
+         <width>68</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>≤0.5s达标率</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="s_80gal_judgetime_le_rate">
+       <property name="geometry">
+        <rect>
+         <x>130</x>
+         <y>61</y>
+         <width>60</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="readOnly">
+        <bool>true</bool>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_69">
+       <property name="geometry">
+        <rect>
+         <x>9</x>
+         <y>87</y>
+         <width>78</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>达标率≥70%</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="s_80gal_judgetime_pass">
+       <property name="geometry">
+        <rect>
+         <x>130</x>
+         <y>87</y>
+         <width>60</width>
+         <height>20</height>
+        </rect>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_70">
+       <property name="geometry">
+        <rect>
+         <x>9</x>
+         <y>113</y>
+         <width>36</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>平均值</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="s_80gal_judgetime_avg">
+       <property name="geometry">
+        <rect>
+         <x>130</x>
+         <y>113</y>
+         <width>60</width>
+         <height>20</height>
+        </rect>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_66">
+       <property name="geometry">
+        <rect>
+         <x>9</x>
+         <y>139</y>
+         <width>36</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>最大值</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="s_80gal_judgetime_max">
+       <property name="geometry">
+        <rect>
+         <x>130</x>
+         <y>139</y>
+         <width>60</width>
+         <height>20</height>
+        </rect>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_71">
+       <property name="geometry">
+        <rect>
+         <x>9</x>
+         <y>165</y>
+         <width>36</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>最小值</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="s_80gal_judgetime_min">
+       <property name="geometry">
+        <rect>
+         <x>130</x>
+         <y>165</y>
+         <width>60</width>
+         <height>20</height>
+        </rect>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QWidget" name="page_3">
+      <widget class="QLabel" name="label_80">
+       <property name="geometry">
+        <rect>
+         <x>9</x>
+         <y>9</y>
+         <width>91</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>120gal统计组数</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="s_120gal_judgetime_sum">
+       <property name="geometry">
+        <rect>
+         <x>130</x>
+         <y>9</y>
+         <width>60</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="readOnly">
+        <bool>true</bool>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_76">
+       <property name="geometry">
+        <rect>
+         <x>9</x>
+         <y>35</y>
+         <width>80</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>≤0.5s达标组数</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="s_120gal_judgetime_le_cnt">
+       <property name="geometry">
+        <rect>
+         <x>130</x>
+         <y>35</y>
+         <width>60</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="readOnly">
+        <bool>true</bool>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_73">
+       <property name="geometry">
+        <rect>
+         <x>9</x>
+         <y>61</y>
+         <width>68</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>≤0.5s达标率</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="s_120gal_judgetime_le_rate">
+       <property name="geometry">
+        <rect>
+         <x>130</x>
+         <y>61</y>
+         <width>60</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="readOnly">
+        <bool>true</bool>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_77">
+       <property name="geometry">
+        <rect>
+         <x>9</x>
+         <y>87</y>
+         <width>70</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>达标率≥70%</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="s_120gal_judgetime_pass">
+       <property name="geometry">
+        <rect>
+         <x>130</x>
+         <y>87</y>
+         <width>60</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="readOnly">
+        <bool>true</bool>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_78">
+       <property name="geometry">
+        <rect>
+         <x>9</x>
+         <y>113</y>
+         <width>36</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>平均值</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="s_120gal_judgetime_avg">
+       <property name="geometry">
+        <rect>
+         <x>130</x>
+         <y>113</y>
+         <width>60</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="readOnly">
+        <bool>true</bool>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_74">
+       <property name="geometry">
+        <rect>
+         <x>9</x>
+         <y>139</y>
+         <width>36</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>最大值</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="s_120gal_judgetime_max">
+       <property name="geometry">
+        <rect>
+         <x>130</x>
+         <y>139</y>
+         <width>60</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="readOnly">
+        <bool>true</bool>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_79">
+       <property name="geometry">
+        <rect>
+         <x>9</x>
+         <y>165</y>
+         <width>36</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>最小值</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="s_120gal_judgetime_min">
+       <property name="geometry">
+        <rect>
+         <x>130</x>
+         <y>165</y>
+         <width>60</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="readOnly">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </widget>
+    </widget>
+    <widget class="QPushButton" name="s_judgetime_l">
+     <property name="geometry">
+      <rect>
+       <x>91</x>
+       <y>30</y>
+       <width>26</width>
+       <height>24</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>&lt;</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_101">
+     <property name="geometry">
+      <rect>
+       <x>40</x>
+       <y>31</y>
+       <width>31</width>
+       <height>24</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>阈值</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="s_judgetime_label">
+     <property name="geometry">
+      <rect>
+       <x>123</x>
+       <y>30</y>
+       <width>35</width>
+       <height>24</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>40gal</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="s_judgetime_r">
+     <property name="geometry">
+      <rect>
+       <x>160</x>
+       <y>30</y>
+       <width>25</width>
+       <height>24</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>&gt;</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QGroupBox" name="groupBox_10">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>240</y>
+      <width>240</width>
+      <height>171</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>标准答案筛选</string>
+    </property>
+    <widget class="QPushButton" name="selectAnswerButton">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>70</y>
+       <width>80</width>
+       <height>24</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>选择文件路径</string>
+     </property>
+    </widget>
+    <widget class="QTextEdit" name="answerFileTextEdit">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>20</y>
+       <width>181</width>
+       <height>41</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="insertAnswerButton">
+     <property name="geometry">
+      <rect>
+       <x>130</x>
+       <y>70</y>
+       <width>80</width>
+       <height>24</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>导入标准答案</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="queryButton">
+     <property name="geometry">
+      <rect>
+       <x>60</x>
+       <y>110</y>
+       <width>120</width>
+       <height>24</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>查询</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="exportButton">
+     <property name="geometry">
+      <rect>
+       <x>60</x>
+       <y>140</y>
+       <width>120</width>
+       <height>24</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>导出查询结果</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QGroupBox" name="groupBox_11">
+    <property name="geometry">
+     <rect>
+      <x>1020</x>
+      <y>160</y>
+      <width>211</width>
+      <height>159</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>阈值报警最大偏差</string>
+    </property>
+    <widget class="QLabel" name="label_53">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>25</y>
+       <width>48</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>统计组数</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="s_peak_deviation_sum">
+     <property name="geometry">
+      <rect>
+       <x>140</x>
+       <y>25</y>
+       <width>60</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="readOnly">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_55">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>51</y>
+       <width>75</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>≤5%达标组数</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="s_peak_deviation_le_cnt">
+     <property name="geometry">
+      <rect>
+       <x>140</x>
+       <y>51</y>
+       <width>60</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="readOnly">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_56">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>77</y>
+       <width>63</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>≤5%达标率</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="s_peak_deviation_le_rate">
+     <property name="geometry">
+      <rect>
+       <x>140</x>
+       <y>77</y>
+       <width>60</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="readOnly">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_57">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>103</y>
+       <width>70</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>达标率≥95%</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="s_peak_deviation_pass">
+     <property name="geometry">
+      <rect>
+       <x>140</x>
+       <y>103</y>
+       <width>60</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="readOnly">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_4">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>129</y>
+       <width>84</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>最大偏差百分比</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="s_peak_deviation_max">
+     <property name="geometry">
+      <rect>
+       <x>140</x>
+       <y>129</y>
+       <width>60</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="readOnly">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QGroupBox" name="groupBox_12">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>10</y>
+      <width>240</width>
+      <height>221</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>数据库信息配置</string>
+    </property>
+    <widget class="QLabel" name="label_54">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>25</y>
+       <width>38</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>host：</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_58">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>51</y>
+       <width>37</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>port：</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_59">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>77</y>
+       <width>60</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>dbname：</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_60">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>103</y>
+       <width>37</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>user：</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_61">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>129</y>
+       <width>67</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>password：</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="dbHostEdit">
+     <property name="geometry">
+      <rect>
+       <x>83</x>
+       <y>25</y>
+       <width>132</width>
+       <height>20</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="dbPortEdit">
+     <property name="geometry">
+      <rect>
+       <x>83</x>
+       <y>51</y>
+       <width>132</width>
+       <height>20</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="dbNameEdit">
+     <property name="geometry">
+      <rect>
+       <x>83</x>
+       <y>77</y>
+       <width>132</width>
+       <height>20</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="dbUserEdit">
+     <property name="geometry">
+      <rect>
+       <x>83</x>
+       <y>103</y>
+       <width>132</width>
+       <height>20</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="dbPwdEdit">
+     <property name="geometry">
+      <rect>
+       <x>83</x>
+       <y>129</y>
+       <width>132</width>
+       <height>20</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QComboBox" name="dbSchemaComboBox">
+     <property name="geometry">
+      <rect>
+       <x>90</x>
+       <y>190</y>
+       <width>121</width>
+       <height>24</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_62">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>190</y>
+       <width>56</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>schema：</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="connectDbButton">
+     <property name="geometry">
+      <rect>
+       <x>70</x>
+       <y>160</y>
+       <width>81</width>
+       <height>24</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>连接数据库</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="Line" name="line">
+    <property name="geometry">
+     <rect>
+      <x>290</x>
+      <y>-10</y>
+      <width>20</width>
+      <height>10000</height>
+     </rect>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Orientation::Vertical</enum>
+    </property>
+   </widget>
+   <widget class="QGroupBox" name="groupBox_13">
+    <property name="geometry">
+     <rect>
+      <x>790</x>
+      <y>570</y>
+      <width>211</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>先报警后预警</string>
+    </property>
+    <widget class="QLabel" name="label_65">
+     <property name="geometry">
+      <rect>
+       <x>9</x>
+       <y>20</y>
+       <width>96</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>先报警后预警组数</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="s_alarm_before_p_alarm_cnt">
+     <property name="geometry">
+      <rect>
+       <x>140</x>
+       <y>20</y>
+       <width>60</width>
+       <height>18</height>
+      </rect>
+     </property>
+     <property name="readOnly">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QGroupBox" name="groupBox_9">
+    <property name="geometry">
+     <rect>
+      <x>790</x>
+      <y>20</y>
+      <width>211</width>
+      <height>261</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>阈值报警传输时间</string>
+    </property>
+    <widget class="QStackedWidget" name="s_sendtime_stackedWidget">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>60</y>
+       <width>191</width>
+       <height>191</height>
+      </rect>
+     </property>
+     <property name="currentIndex">
+      <number>2</number>
+     </property>
+     <widget class="QWidget" name="page_4">
+      <widget class="QLabel" name="label_67">
+       <property name="geometry">
+        <rect>
+         <x>9</x>
+         <y>9</y>
+         <width>91</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>40gal统计组数</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="s_40gal_sendtime_sum">
+       <property name="geometry">
+        <rect>
+         <x>130</x>
+         <y>9</y>
+         <width>60</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="readOnly">
+        <bool>true</bool>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_75">
+       <property name="geometry">
+        <rect>
+         <x>9</x>
+         <y>35</y>
+         <width>80</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>≤0.1s达标组数</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="s_40gal_sendtime_le_cnt">
+       <property name="geometry">
+        <rect>
+         <x>130</x>
+         <y>35</y>
+         <width>60</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="readOnly">
+        <bool>true</bool>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_81">
+       <property name="geometry">
+        <rect>
+         <x>9</x>
+         <y>61</y>
+         <width>68</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>≤0.1s达标率</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="s_40gal_sendtime_le_rate">
+       <property name="geometry">
+        <rect>
+         <x>130</x>
+         <y>61</y>
+         <width>60</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="readOnly">
+        <bool>true</bool>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_82">
+       <property name="geometry">
+        <rect>
+         <x>9</x>
+         <y>87</y>
+         <width>70</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>达标率≥95%</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="s_40gal_sendtime_pass">
+       <property name="geometry">
+        <rect>
+         <x>130</x>
+         <y>87</y>
+         <width>60</width>
+         <height>20</height>
+        </rect>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_83">
+       <property name="geometry">
+        <rect>
+         <x>9</x>
+         <y>113</y>
+         <width>36</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>平均值</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="s_40gal_sendtime_avg">
+       <property name="geometry">
+        <rect>
+         <x>130</x>
+         <y>113</y>
+         <width>60</width>
+         <height>20</height>
+        </rect>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_84">
+       <property name="geometry">
+        <rect>
+         <x>9</x>
+         <y>139</y>
+         <width>36</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>最大值</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="s_40gal_sendtime_max">
+       <property name="geometry">
+        <rect>
+         <x>130</x>
+         <y>139</y>
+         <width>60</width>
+         <height>20</height>
+        </rect>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_85">
+       <property name="geometry">
+        <rect>
+         <x>9</x>
+         <y>165</y>
+         <width>36</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>最小值</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="s_40gal_sendtime_min">
+       <property name="geometry">
+        <rect>
+         <x>130</x>
+         <y>165</y>
+         <width>60</width>
+         <height>20</height>
+        </rect>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QWidget" name="page_5">
+      <widget class="QLabel" name="label_86">
+       <property name="geometry">
+        <rect>
+         <x>9</x>
+         <y>9</y>
+         <width>91</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>80gal统计组数</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="s_80gal_sendtime_sum">
+       <property name="geometry">
+        <rect>
+         <x>130</x>
+         <y>9</y>
+         <width>60</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="readOnly">
+        <bool>true</bool>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_87">
+       <property name="geometry">
+        <rect>
+         <x>9</x>
+         <y>35</y>
+         <width>80</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>≤0.1s达标组数</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="s_80gal_sendtime_le_cnt">
+       <property name="geometry">
+        <rect>
+         <x>130</x>
+         <y>35</y>
+         <width>60</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="readOnly">
+        <bool>true</bool>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_88">
+       <property name="geometry">
+        <rect>
+         <x>9</x>
+         <y>61</y>
+         <width>68</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>≤0.1s达标率</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="s_80gal_sendtime_le_rate">
+       <property name="geometry">
+        <rect>
+         <x>130</x>
+         <y>61</y>
+         <width>60</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="readOnly">
+        <bool>true</bool>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_89">
+       <property name="geometry">
+        <rect>
+         <x>9</x>
+         <y>87</y>
+         <width>78</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>达标率≥95%</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="s_80gal_sendtime_pass">
+       <property name="geometry">
+        <rect>
+         <x>130</x>
+         <y>87</y>
+         <width>60</width>
+         <height>20</height>
+        </rect>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_90">
+       <property name="geometry">
+        <rect>
+         <x>9</x>
+         <y>113</y>
+         <width>36</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>平均值</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="s_80gal_sendtime_avg">
+       <property name="geometry">
+        <rect>
+         <x>130</x>
+         <y>113</y>
+         <width>60</width>
+         <height>20</height>
+        </rect>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_91">
+       <property name="geometry">
+        <rect>
+         <x>9</x>
+         <y>139</y>
+         <width>36</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>最大值</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="s_80gal_sendtime_max">
+       <property name="geometry">
+        <rect>
+         <x>130</x>
+         <y>139</y>
+         <width>60</width>
+         <height>20</height>
+        </rect>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_92">
+       <property name="geometry">
+        <rect>
+         <x>9</x>
+         <y>165</y>
+         <width>36</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>最小值</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="s_80gal_sendtime_min">
+       <property name="geometry">
+        <rect>
+         <x>130</x>
+         <y>165</y>
+         <width>60</width>
+         <height>20</height>
+        </rect>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QWidget" name="page_6">
+      <widget class="QLabel" name="label_93">
+       <property name="geometry">
+        <rect>
+         <x>9</x>
+         <y>9</y>
+         <width>91</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>120gal统计组数</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="s_120gal_sendtime_sum">
+       <property name="geometry">
+        <rect>
+         <x>130</x>
+         <y>9</y>
+         <width>60</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="readOnly">
+        <bool>true</bool>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_94">
+       <property name="geometry">
+        <rect>
+         <x>9</x>
+         <y>35</y>
+         <width>80</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>≤0.1s达标组数</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="s_120gal_sendtime_le_cnt">
+       <property name="geometry">
+        <rect>
+         <x>130</x>
+         <y>35</y>
+         <width>60</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="readOnly">
+        <bool>true</bool>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_95">
+       <property name="geometry">
+        <rect>
+         <x>9</x>
+         <y>61</y>
+         <width>68</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>≤0.1s达标率</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="s_120gal_sendtime_le_rate">
+       <property name="geometry">
+        <rect>
+         <x>130</x>
+         <y>61</y>
+         <width>60</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="readOnly">
+        <bool>true</bool>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_96">
+       <property name="geometry">
+        <rect>
+         <x>9</x>
+         <y>87</y>
+         <width>70</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>达标率≥95%</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="s_120gal_sendtime_pass">
+       <property name="geometry">
+        <rect>
+         <x>130</x>
+         <y>87</y>
+         <width>60</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="readOnly">
+        <bool>true</bool>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_97">
+       <property name="geometry">
+        <rect>
+         <x>9</x>
+         <y>113</y>
+         <width>36</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>平均值</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="s_120gal_sendtime_avg">
+       <property name="geometry">
+        <rect>
+         <x>130</x>
+         <y>113</y>
+         <width>60</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="readOnly">
+        <bool>true</bool>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_98">
+       <property name="geometry">
+        <rect>
+         <x>9</x>
+         <y>139</y>
+         <width>36</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>最大值</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="s_120gal_sendtime_max">
+       <property name="geometry">
+        <rect>
+         <x>130</x>
+         <y>139</y>
+         <width>60</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="readOnly">
+        <bool>true</bool>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_99">
+       <property name="geometry">
+        <rect>
+         <x>9</x>
+         <y>165</y>
+         <width>36</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>最小值</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="s_120gal_sendtime_min">
+       <property name="geometry">
+        <rect>
+         <x>130</x>
+         <y>165</y>
+         <width>60</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="readOnly">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </widget>
+    </widget>
+    <widget class="QLabel" name="label_100">
+     <property name="geometry">
+      <rect>
+       <x>40</x>
+       <y>31</y>
+       <width>31</width>
+       <height>24</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>阈值</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="s_sendtime_label">
+     <property name="geometry">
+      <rect>
+       <x>123</x>
+       <y>31</y>
+       <width>35</width>
+       <height>24</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>40gal</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="s_sendtime_l">
+     <property name="geometry">
+      <rect>
+       <x>91</x>
+       <y>31</y>
+       <width>26</width>
+       <height>24</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>&lt;</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="s_sendtime_r">
+     <property name="geometry">
+      <rect>
+       <x>160</x>
+       <y>31</y>
+       <width>25</width>
+       <height>24</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>&gt;</string>
+     </property>
+    </widget>
+    <zorder>label_100</zorder>
+    <zorder>s_sendtime_stackedWidget</zorder>
+    <zorder>s_sendtime_label</zorder>
+    <zorder>s_sendtime_l</zorder>
+    <zorder>s_sendtime_r</zorder>
+   </widget>
+   <widget class="QGroupBox" name="groupBox_7">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>420</y>
+      <width>241</width>
+      <height>171</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>时间筛选</string>
+    </property>
+    <widget class="QDateTimeEdit" name="endDateTimeEdit">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>90</y>
+       <width>181</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="displayFormat">
+      <string>yyyy/M/d HH:mm:ss.zzz</string>
+     </property>
+    </widget>
+    <widget class="QDateTimeEdit" name="startDateTimeEdit">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>40</y>
+       <width>181</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="displayFormat">
+      <string>yyyy/M/d HH:mm:ss.zzz</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_5">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>20</y>
+       <width>81</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>开始时间</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_37">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>70</y>
+       <width>71</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>结束时间</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="timeQueryButton">
+     <property name="geometry">
+      <rect>
+       <x>60</x>
+       <y>130</y>
+       <width>120</width>
+       <height>24</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>查询</string>
+     </property>
+    </widget>
+   </widget>
+   <zorder>groupBox</zorder>
+   <zorder>groupBox_2</zorder>
+   <zorder>groupBox_3</zorder>
+   <zorder>groupBox_4</zorder>
+   <zorder>groupBox_5</zorder>
+   <zorder>groupBox_6</zorder>
+   <zorder>groupBox_10</zorder>
+   <zorder>groupBox_11</zorder>
+   <zorder>groupBox_12</zorder>
+   <zorder>line</zorder>
+   <zorder>groupBox_13</zorder>
+   <zorder>groupBox_8</zorder>
+   <zorder>groupBox_9</zorder>
+   <zorder>groupBox_7</zorder>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources>
+  <include location="StatFromDB.qrc"/>
+ </resources>
+ <connections/>
+</ui>
