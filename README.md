@@ -18,7 +18,8 @@
 
 # 四.软件界面及使用说明
 
-![image-20250708135939720](https://github.com/KaiBai03/StatFromDB/blob/master/界面截图.png)
+<img width="1557" height="842" alt="QQ截图20250731132630" src="https://github.com/user-attachments/assets/90602e84-96f4-444f-8520-27508569fea2" />
+
 
 •	输入完整配置信息可进行自定义连接，全部置空则会根据exe同目录下config.ini进行配置连接，config.ini中应存在database字段以及完整配置信息，config,ini示例如下
 
