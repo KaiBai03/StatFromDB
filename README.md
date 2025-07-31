@@ -6,17 +6,15 @@
 
 •	编译环境为 Windows 11 x64，QT6.8.1，MSVC2022_64。
 
-•	已进行打包，无需C++，python环境，但未测试编译环境外使用情况。
-
 •	需提供权限开放的PostgreSQL数据库。
 
 # 三.文件说明
 
-•	LayoutTest.exe：主程序
-•	InsertStandAnswerToDb.exe：标准答案导入工具
-•	ExportResultToExcel.exe：结果导出工具
-•	config.ini：数据库连接配置文件
-•	libpq.dll、libiconv-2.dll、libcrypto-3-x64.dll 等：依赖库
+- lib：QT和postgres数据库的动态依赖库dll
+- scripts：导入和导出功能的python脚本源码及打包exe
+- sql：实现统计查询的sql
+- test_tables.sql 导入测试地震波数据
+- StandardAnswersFile.csv 与测试地震波匹配的标准答案文件，供测试
 
 # 四.软件界面及使用说明
 
@@ -114,7 +112,7 @@ report_num integer,
 PRIMARY KEY(station_s_wave_alarm_id)
 ```
 
-# 六,数据统计方法
+# 六,数据统计方法(SQL逻辑)
 
 ## 计算对象
 
